@@ -1,0 +1,58 @@
+/* Основной стиль для всего сайта */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0f7ff;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем небольшую тень */
+}
+
+/* Стиль для шапки сайта */
+header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Размещаем элементы по центру */
+  background-color: #1E90FF; /* Цвет фона шапки */
+  color: white; /* Цвет текста в шапке */
+}
+
+h1 {
+  margin: 0; /* Убираем отступы вокруг заголовка */
+}
+
+.logo {
+  margin-left: 10px;
+  transition: transform 0.3s ease; /* Добавляем анимацию */
+}
+.logo:hover {
+  transform: scale(1.1); /* Увеличиваем размер при наведении */
+}
+
+/* Стиль навигационного меню */
+nav ul {
+  list-style: none; /* Убираем маркеры у списка */
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Размещаем ссылки по центру */
+  background-color: #1E90FF; /* Цвет фона пунктов меню */
+}
+
+nav ul li {
+  margin: 0 10px; /* Устанавливаем отступы между пунктами меню */
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px; /* Уменьшаем размер шрифта */
+  transition: color 0.3s ease; /* Добавляем анимацию */
+}
+ul li a:hover {
+  color: #a8dfff; /* Изменяем цвет при наведении */
+}
+
+/* Стиль для основного содержимого страницы */
+main {
+  padding: 30px; /* Увеличиваем отступы */
+  background-color: #fff; /* Добавляем контрастный цвет фона */
+}
