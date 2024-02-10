@@ -1,33 +1,30 @@
-package com.example.demo;
-
-import lombok.Data;
+package entity;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
+import jakarta.persistence.Entity;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import lombok.Data;
 
+@Entity
 @Data
-@Table("Products")
-public class Product {
-	
+@Table("Manufacturers")
+public class Manufacturer {
+
 	@Id
-	private String id;
+	private Long id;
 	
 	@NotNull
 	@Size(min=3, message="Имя должно содержать не менее 3 символов")
 	private String name;
-
-	private Float weight;
 	
-	@NotNull
-	@Size(min=1, message="Выберите производителя")
-	private Manufacturer manufacturer;
-	private Float width;
-	private Float height;
-	private Float length;
+	private String country;
+	private String person;
+	private String phone;
+	
+	
 }
-
 
 
