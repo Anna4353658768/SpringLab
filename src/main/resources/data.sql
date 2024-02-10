@@ -17,7 +17,7 @@ INSERT INTO manufacturers (id, name, country, person, phone)
 INSERT INTO manufacturers (id, name, country, person, phone) 
 	VALUES (5, 'ФГУП "РосТех"', 'Россия', 'Мария Сидорова', '+7 (012) 345-67-89');
 	
-INSERT INTO manufacturers (id, name, country, person, phone,) 
+INSERT INTO manufacturers (id, name, country, person, phone) 
 	VALUES (6, 'АО "АлтайМебель"', 'Россия', 'Анна Казакова', '+7 (345) 678-90-12');
 	
 INSERT INTO manufacturers (id, name, country, person, phone) 
@@ -34,33 +34,33 @@ INSERT INTO manufacturers (id, name, country, person, phone)
 	
 	
 	
-INSERT INTO products (id, name, manufacturer, weight, width, height, length) 
+INSERT INTO products (id, name, manufacturerid, weight, width, height, length) 
 	VALUES (1, 'Хлебопечка', 3, 1500, 25, 30, 30);
 	
-INSERT INTO products (id, name, manufacturer, weight, width, height, length) 
+INSERT INTO products (id, name, manufacturerid, weight, width, height, length) 
 	VALUES (2, 'Микроволновка', 5, 12000, 40, 35, 25);
 	
-INSERT INTO products (id, name, manufacturer, weight, width, height, length) 
+INSERT INTO products (id, name, manufacturerid, weight, width, height, length) 
 	VALUES (3, 'Пылесос', 2, 4500, 20, 15, 30);
 	
-INSERT INTO products (id, name, manufacturer, weight, width, height, length) 
+INSERT INTO products (id, name, manufacturerid, weight, width, height, length) 
 	VALUES (4, 'Холодильник', 8, 70000, 70, 180, 70);
 	
-INSERT INTO products (id, name, manufacturer, weight, width, height, length) 
+INSERT INTO products (id, name, manufacturerid, weight, width, height, length) 
 	VALUES (5, 'Телевизор', 6, 15000, 60, 100, 10);
 	
-INSERT INTO products (id, name, manufacturer, weight, width, height, length)
+INSERT INTO products (id, name, manufacturerid, weight, width, height, length)
 	VALUES (6, 'Утюг', 4, 1500, 10, 15, 20);
 	
-INSERT INTO products (id, name, manufacturer, weight, width, height, length)	
+INSERT INTO products (id, name, manufacturerid, weight, width, height, length)	
 	VALUES (7, 'Плита газовая', 1, 30000, 80, 85, 60);
 	
-INSERT INTO products (id, name, manufacturer, weight, width, height, length) 
+INSERT INTO products (id, name, manufacturerid, weight, width, height, length) 
 	VALUES (8, 'Чайник электрический', 10, 1000, 15, 20, 15);
 	
-INSERT INTO products (id, name, manufacturer, weight, width, height, length) 
+INSERT INTO products (id, name, manufacturerid, weight, width, height, length) 
 	VALUES (9, 'Фен для волос', 7, 900, 10, 10, 25);
 	
-INSERT INTO products (id, name, manufacturer, weight, width, height, length) 
+INSERT INTO products (id, name, manufacturerid, weight, width, height, length) 
 	VALUES (10, 'Соковыжималка', 9, 3000, 30, 40, 30);
 

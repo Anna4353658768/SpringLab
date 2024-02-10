@@ -1,9 +1,9 @@
-package repository;
+package com.example.demo;
 
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-import entity.Manufacturer;
-
+@Repository
 public interface ManufacturerRepository extends CrudRepository<Manufacturer, Long>{
 
 }

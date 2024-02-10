@@ -1,16 +1,16 @@
 
 CREATE TABLE IF NOT EXISTS manufacturers (
 	id serial NOT NULL ,
-	name character varying(30),
-	country character varying(30),
-	person character varying(30),
-	phone character varying(30),
+	name character varying(50),
+	country character varying(50),
+	person character varying(50),
+	phone character varying(50),
 	CONSTRAINT manufacturers_pkey PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS products (
 	id serial NOT NULL ,
-	name character varying(30) ,
+	name character varying(50) ,
 	manufacturerid integer NOT NULL ,
 	weight real ,
 	width real ,

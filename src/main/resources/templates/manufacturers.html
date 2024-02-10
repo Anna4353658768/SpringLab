@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +15,9 @@
 
 	<main>
 		<!-- Основное содержимое страницы здесь -->
+		<div th:each="el : manufacturers" class="alert alert-info mt-2">
+			<h3 th:text="${el.name}"/>
+		</div>
 	</main>
 	<footer>
 		<!-- Нижний колонтитул здесь -->
