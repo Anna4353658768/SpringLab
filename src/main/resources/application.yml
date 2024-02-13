@@ -1,7 +1,0 @@
-spring:
-  datasource:
-    generate-unique-name: false
-    name: goods
-
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
