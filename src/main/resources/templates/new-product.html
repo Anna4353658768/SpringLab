@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>СуперПолк товары</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+
+<body>
+	<header>
+		<a href="/">
+		    <img th:src="@{/images/logo.jpg}" width="100" height="100" />
+		</a>
+		<h1>Добавить новый товар</h1>
+	</header>
+
+	<main>
+	    <form action="#" th:action="@{/products/add}" th:object="${product}" method="post">
+			
+			<label class="titleModel">Название продукта</label>
+			<span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="validationError"></span>
+       		<input type="text" id="name" name="name" placeholder="Название продукта" th:value="*{name}"><br>
+	        
+	        <label class="titleModel">Вес</label>
+	        <span th:if="${#fields.hasErrors('weight')}" th:errors="*{weight}" class="validationError"></span>
+	       	<input type="number" id="weight" name="weight" step="0.1" placeholder="Вес" th:value="*{weight}"><br> 
+	        
+	        <label class="titleModel">Ширина</label>
+	        <span th:if="${#fields.hasErrors('width')}" th:errors="*{width}" class="validationError"></span>
+	        <input type="number" id="width" name="width" step="0.1" placeholder="Ширина" th:value="*{width}"><br>
+	        
+	        <label class="titleModel">Высота</label>
+	        <span th:if="${#fields.hasErrors('height')}" th:errors="*{height}" class="validationError"></span>
+	       	<input type="number" id="height" name="height" step="0.1" placeholder="Высота" th:value="*{height}"><br>
+	        
+	        <label class="titleModel">Длина</label>
+	        <span th:if="${#fields.hasErrors('length')}" th:errors="*{length}" class="validationError"></span>
+	        <input type="number" id="length" name="length" step="0.1" placeholder="Длина" th:value="*{length}"><br>
+
+			
+	        <label class="titleModel">Производители</label>
+	        <span th:if="${#fields.hasErrors('manufacturerid')}" th:errors="*{manufacturerid}" class="validationError"></span>
+			<select th:field="*{manufacturerid}" id="dropDownList">
+				<option value="">— Выберите производителя —</option>
+			    <option th:each="manufacturer : ${manufacturers}" th:value="${manufacturer.id}" th:text="${manufacturer.name}"></option>
+			</select>
+	        
+	        
+	        <input type="submit" value="Отправить" class="pressed-button">
+	    </form>
+	</main>
+
+	<footer>
+		<!-- Нижний колонтитул здесь -->
+	</footer>
+	
+</body>
+
+</html>

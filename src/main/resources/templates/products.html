@@ -17,10 +17,37 @@
 	</header>
 
 	<main>
-		<!-- Основное содержимое страницы здесь -->
-		<div th:each="el : ${products}" class="alert alert-info mt-2">
-			<h3 th:text="${el.name}"></h3>
-		</div>
+		<table>
+	        <tr>
+	            <th>ID</th>
+	            <th>Название</th>
+	            <th>Вес</th>
+	            <th>Ширина</th>
+	            <th>Высота</th>
+	            <th>Длина</th>
+	            <th>Производитель</th>
+	            <th>
+					<a href="/products/add" class="pressed-button">Добавить</a>
+				</th>
+	        </tr>
+	        <tr th:each="product : ${products}">
+	            <td th:text="${product.id}">ID</td>
+	            <td th:text="${product.name}">Название</td>
+	            <td th:text="${product.weight}">Вес</td>
+	            <td th:text="${product.width}">Ширина</td>
+	            <td th:text="${product.height}">Высота</td>
+	            <td th:text="${product.length}">Длина</td>
+	            <td th:text="${product.manufacturerid.name}">Производитель</td>
+				<td style="width: 10px;">
+					<a th:href="@{/products/edit(id=${product.id})}">
+						<img th:src="@{/images/edit.png}" class="imgSize">
+					</a>
+					<a th:href="@{/products/delete(id=${product.id})}">
+						<img th:src="@{/images/delete.png}" class="imgSize">
+					</a>
+				</td>
+	        </tr>
+	    </table>
 	</main>
 	<footer>
 		<!-- Нижний колонтитул здесь -->

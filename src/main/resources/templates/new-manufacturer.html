@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>СуперПолк товары</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+
+<body>
+	<header>
+		<a href="/">
+		    <img th:src="@{/images/logo.jpg}" width="100" height="100" />
+		</a>
+		<h1>Добавить нового производителя</h1>
+	</header>
+
+	<main>
+		<form action="#" th:action="@{/manufacturers/add}" th:object="${manufacturer}" method="post">
+			
+			<label class="titleModel">Производитель</label>
+			<span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="validationError"></span>
+       		<input type="text" id="name" name="name" placeholder="Введите производителя" th:value="*{name}" ><br>
+	        
+	        <label class="titleModel">Страна</label>
+	        <span th:if="${#fields.hasErrors('country')}" th:errors="*{country}" class="validationError"></span>
+	        <input type="text" id="country" name="country" placeholder="Введите страну" th:value="*{country}"><br>
+	        
+	        <label class="titleModel">Контактное лицо</label>
+	        <span th:if="${#fields.hasErrors('person')}" th:errors="*{person}" class="validationError"></span>
+	        <input type="text" id="person" name="person" placeholder="Введите контактное лицо" th:value="*{person}"><br>
+	        
+	        <label class="titleModel">Телефон</label>
+	        <span th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" class="validationError"></span>
+	        <input type="text" id="phone" name="phone" placeholder="Введите номер телефон" th:value="*{phone}"><br>
+	        
+	        <input type="submit" value="Отправить" class="pressed-button">
+	    </form>
+	</main>
+	
+	<footer>
+		<!-- Нижний колонтитул здесь -->
+	</footer>
+	
+</body>
+
+</html>

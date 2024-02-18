@@ -56,3 +56,129 @@ main {
   padding: 30px; /* Увеличиваем отступы */
   background-color: #fff; /* Добавляем контрастный цвет фона */
 }
+
+table {
+	width: 100%;
+   	border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+	border: 1px solid #d8d8d8;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+	background-color: #c7e7ff;
+}
+
+tr:nth-child(even) {
+	background-color: #edf6fd;
+}
+
+tr:nth-child(odd) {
+	background-color: #ffffff;
+}
+
+.button-container {
+	padding: 5px 10px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.button-container button {
+	width: 100%;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+        
+.button-container button {
+  border-radius: 25px; /* Добавляет закругление краев */
+  background-color: #45a049; /* Устанавливает зеленый цвет фона */
+  color: white; /* Устанавливает белый цвет текста */
+  padding: 10px 20px; /* Устанавливает отступы внутри кнопки */
+  border: none; /* Убирает границу кнопки */
+}
+
+.image-btn {
+  border-radius: 5px; /* Закругление углов */
+  padding: 5px; /* Отступ внутри кнопки */
+  transition: all 0.3s ease; /* Плавное изменение стилей при наведении */
+  background-color: transparent; /* Прозрачный фон */
+  border: none; /* Удаление границы */
+}
+
+.image-btn:hover {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Увеличение тени при наведении */
+  background-color: transparent; /* Прозрачный фон при наведении */
+}
+
+.pressed-button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 40px;
+  margin: 10px 20px;
+  border-radius: 30px;
+  background-image: linear-gradient(45deg, #6ab1d7 0%, #33d9de 50%, #002878 100%);
+  background-position: 100% 0;
+  background-size: 200% 200%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+  transition: .5s;
+}
+
+.pressed-button:hover {
+  box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+  background-position: 0 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+input, select {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.validationError {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.titleModel {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.imgSize{
+	width: 40px; 
+	height: 40px;
+}
+
+a {
+  text-decoration: none; /* убираем подчеркивание ссылки */
+  transition: transform 0.2s; /* добавляем плавное выделение при наведении */
+}
