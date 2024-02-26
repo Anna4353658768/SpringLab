@@ -8,6 +8,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.example.demo.controller.HomeController;
@@ -17,8 +18,9 @@ public class HomeControllerTest {
 	
 	@Autowired
 	private MockMvc mockMvc;
-	
+
 	@Test
+	@WithMockUser(username = "Dima")
 	public void testHomePage() throws Exception {
 		mockMvc.perform(get("/"))
 		.andExpect(status().isOk())

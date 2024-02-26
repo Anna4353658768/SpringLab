@@ -21,8 +21,22 @@
 			<li><a href="manufacturers">Производители</a></li>
 		</ul>
 	</nav>
-	<main>
-		<!-- Основное содержимое страницы здесь -->
+	<main style="text-align: center;">
+	
+		<div th:switch="${username}"> 
+			<div th:case="anonymousUser">
+				<form th:action="@{/login}">
+	        		<input type="submit" value="Войти" class="pressed-button" style="display: block; margin: 0 auto;">
+	   	 		</form>
+			</div>
+		  	<div th:case="*">
+		  		<label class="titleModel">Здравствуйте: [[${username}]]</label><br><br>
+		  		<form th:action="@{/logout}" method="post">
+	        		<input type="submit" value="Выйти" class="pressed-button" style="display: block; margin: 0 auto;">
+	   	 		</form>
+		  	</div> 
+		</div>
+		
 	</main>
 	<footer>
 		<!-- Нижний колонтитул здесь -->

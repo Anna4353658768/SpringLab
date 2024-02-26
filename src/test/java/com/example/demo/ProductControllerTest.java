@@ -10,9 +10,11 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.example.demo.controller.ProductController;
+import com.example.demo.repository.ManufacturerRepository;
 import com.example.demo.repository.ProductRepository;
 
 @WebMvcTest(ProductController.class)
@@ -23,8 +25,12 @@ public class ProductControllerTest {
 	
     @MockBean
     private ProductRepository productRepository;
-	
+    
+    @MockBean
+    private ManufacturerRepository manufacturerRepository;
+    
 	@Test
+	@WithMockUser(username = "Dima")
 	public void testHomePage() throws Exception {
 		mockMvc.perform(get("/products"))
 		.andExpect(status().isOk())
