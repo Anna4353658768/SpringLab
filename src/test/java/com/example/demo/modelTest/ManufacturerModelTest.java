@@ -5,9 +5,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import com.example.demo.model.Manufacturer;
 
+@SpringBootTest
 public class ManufacturerModelTest {
 
 	@InjectMocks

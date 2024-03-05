@@ -29,7 +29,6 @@ public class JpaEntityRepositoryTest {
     
     @Test
     void injectedComponentsAreNotNull(){
-    	
          assertThat(dataSource).isNotNull();
          assertThat(jdbcTemplate).isNotNull();
          assertThat(entityManager).isNotNull();

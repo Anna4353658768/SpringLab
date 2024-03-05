@@ -110,8 +110,7 @@ class SecurityTest {
     public void givenUserRole_whenGetRegister_thenOk() throws Exception{
     	mockMvcUser.perform(get("/register"))
     		.andExpect(status().isOk());
-    }
-    
+    }    
     
 }
 
