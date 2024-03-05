@@ -2,10 +2,17 @@ package com.example.demo.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
+
+@Builder
 
 @Data
 @Entity
+@AllArgsConstructor
+@RequiredArgsConstructor
 @Table(name = "manufacturers")
 public class Manufacturer {
 
@@ -32,7 +39,7 @@ public class Manufacturer {
 	@Column(name = "phone")
 	@NotEmpty(message = "Вы должны ввести номер телефона")
 	private String phone;
-	
+
 }
 
 

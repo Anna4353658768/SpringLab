@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.demo.model.RegistrationForm;
 import com.example.demo.repository.UserRepository;
-import com.example.demo.security.RegistrationForm;
 
 @Controller
 @RequestMapping("/register")

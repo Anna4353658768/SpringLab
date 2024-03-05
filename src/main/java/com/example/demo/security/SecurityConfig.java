@@ -17,13 +17,13 @@ public class SecurityConfig {
 	
 	
 	@Bean
-	public PasswordEncoder passwordEncoder() {
+	PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
 	
 	
 	@Bean
-	public UserDetailsService userDetailsService(UserRepository userRepo) {
+	UserDetailsService userDetailsService(UserRepository userRepo) {
 		return username -> {
 			User user = userRepo.findByUsername(username);
 			if (user != null) return user;
@@ -34,7 +34,7 @@ public class SecurityConfig {
 	
 	
 	@Bean
-	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		
 		http.authorizeHttpRequests(auth -> auth
 				.requestMatchers("/", "/login", "/css/**", "images/**", "/register").permitAll()

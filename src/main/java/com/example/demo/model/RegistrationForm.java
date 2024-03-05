@@ -1,7 +1,7 @@
-package com.example.demo.security;
+package com.example.demo.model;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
-import com.example.demo.model.User;
+
 import lombok.Data;
 
 @Data
